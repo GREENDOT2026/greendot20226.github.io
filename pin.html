@@ -3,6 +3,40 @@
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<title>Enter PIN</title>
+</head>
+
+<body class="center neon-bg">
+
+<div class="card glass">
+  <h3>Enter PIN</h3>
+
+  <input id="pinDisplay" disabled>
+
+  <div class="keypad">
+    <button onclick="pinPress(1)">1</button>
+    <button onclick="pinPress(2)">2</button>
+    <button onclick="pinPress(3)">3</button>
+    <button onclick="pinPress(4)">4</button>
+    <button onclick="pinPress(5)">5</button>
+    <button onclick="pinPress(6)">6</button>
+    <button onclick="pinPress(7)">7</button>
+    <button onclick="pinPress(8)">8</button>
+    <button onclick="pinPress(9)">9</button>
+    <button onclick="pinClear()">C</button>
+    <button onclick="pinPress(0)">0</button>
+    <button onclick="pinSubmit()">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
 <title>PIN Login</title>
 </head>
 
