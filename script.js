@@ -1,3 +1,13 @@
+function generateCard(){
+  function block(){
+    return Math.floor(1000 + Math.random()*9000);
+  }
+  return `${block()} ${block()} ${block()} ${block()}`;
+}
+
+if(!localStorage.cardNumber){
+  localStorage.cardNumber = generateCard();
+}
 if(!localStorage.pin){
   localStorage.pin = "1234"; // demo default
 }
