@@ -1,3 +1,14 @@
+if(!localStorage.pin){
+  localStorage.pin = "1234"; // demo default
+}
+
+function checkPin(){
+  if(pin.value === localStorage.pin){
+    window.location = "dashboard.html";
+  } else {
+    alert("Wrong PIN");
+  }
+}
 form.onsubmit = e => {
   e.preventDefault();
   window.location = "pin.html";
