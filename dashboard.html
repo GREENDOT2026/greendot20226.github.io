@@ -53,6 +53,34 @@ button{
 </body>
 </html>
 <script>
+  <body>
+
+<div class="card">
+  <h2>Account Balance</h2>
+  <div class="balance">$<span id="balance">0</span></div>
+  <button onclick="openModal()">Transfer Money</button>
+</div>
+
+<div class="card">
+  <h3>Recent Transactions</h3>
+  <table id="transactionTable">
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Amount</th>
+    </tr>
+  </table>
+</div>
+
+<div id="transferModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" style="cursor:pointer;">&times;</span>
+    <h3>Transfer Money</h3>
+    <input type="text" id="recipient" placeholder="Recipient Name">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="sendMoney()">Send</button>
+  </div>
+</div>
 let realBalance = 2450; // change to any amount
 let currentBalance = 0;
 
@@ -66,3 +94,9 @@ let counter = setInterval(() => {
   }
 }, 20);
 </script>
+<script>
+  // ALL your JS code here
+</script>
+
+</body>
+</html>
