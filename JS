@@ -1,0 +1,4 @@
+function newCard(){
+  localStorage.cardNumber = generateCard();
+  location.reload();
+}
