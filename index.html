@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Demo Bank UI</title>
+</head>
+<body>
+
+<h2>Demo Banking Interface</h2>
+<p>This is a demo — not a real bank.</p>
+
+<form onsubmit="login(event)">
+  <input id="user" placeholder="Username" required>
+  <input id="pass" type="password" placeholder="Password" required>
+  <button>Login</button>
+</form>
+
+<script>
+function login(e){
+  e.preventDefault();
+  alert("Demo login successful");
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
     <title>Green Dot Bank</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
