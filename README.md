@@ -5,152 +5,165 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-body {
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f3057);
-    background-size: 400% 400%;
-    animation: gradient 12s ease infinite;
-    color: white;
+body{
+  background:
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+  url('https://images.unsplash.com/photo-1556742049-908f0d0a1b0c');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  color:white;
 }
 
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* NAVIGATION */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
+.logo{
+  font-size:24px;
+  font-weight:700;
+  color:#2ecc71;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2ecc71;
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-weight:500;
+  transition:0.3s;
 }
 
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
+nav a:hover{
+  color:#2ecc71;
 }
 
-nav a:hover {
-    color: #2ecc71;
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 60px;
 }
 
-.hero {
-    padding-top: 160px;
-    text-align: center;
-    padding-bottom: 120px;
+.hero-text{
+  max-width:500px;
 }
 
-.hero h1 {
-    font-size: 50px;
+.hero-text h1{
+  font-size:48px;
+  margin-bottom:20px;
 }
 
-.hero p {
-    margin-top: 15px;
-    color: #ccc;
+.hero-text p{
+  color:#ccc;
+  margin-bottom:30px;
 }
 
-.btn {
-    margin-top: 30px;
-    padding: 14px 30px;
-    background: #2ecc71;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
+.cta-btn{
+  padding:14px 30px;
+  background:#2ecc71;
+  border:none;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-.section {
-    padding: 80px 20px;
-    text-align: center;
-    background: rgba(0,0,0,0.5);
+.cta-btn:hover{
+  background:#27ae60;
 }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* LOGIN CARD */
+.login-box{
+  background:rgba(255,255,255,0.08);
+  padding:40px;
+  border-radius:20px;
+  backdrop-filter:blur(15px);
+  width:320px;
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
 }
 
-.card {
-    background: rgba(255,255,255,0.08);
-    margin: 20px;
-    padding: 30px;
-    width: 260px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+.login-box h2{
+  margin-bottom:25px;
+  text-align:center;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.login-box input{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:10px;
 }
 
-footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
+.login-box button{
+  width:100%;
+  padding:12px;
+  background:#2ecc71;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
 }
+
+.login-box button:hover{
+  background:#27ae60;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  background:black;
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">Green Dot Bank</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#">About</a>
-        <a href="#">Login</a>
-    </nav>
+  <div class="logo">Green Dot Bank</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <h1>Banking Made Simple & Secure</h1>
-    <p>Modern digital banking built for individuals and businesses.</p>
-    <button class="btn">Open an Account</button>
-</section>
+  <div class="hero-text">
+    <h1>Banking Made Secure & Intelligent</h1>
+    <p>Experience next-generation digital banking with military-grade encryption and seamless financial management.</p>
+    <button class="cta-btn">Open Account</button>
+  </div>
 
-<section class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Online Banking</h3>
-            <p>Manage your account anytime from anywhere.</p>
-        </div>
-
-        <div class="card">
-            <h3>Secure Payments</h3>
-            <p>Encrypted transactions with real-time alerts.</p>
-        </div>
-
-        <div class="card">
-            <h3>Business Solutions</h3>
-            <p>Smart financial tools for companies.</p>
-        </div>
-    </div>
+  <div class="login-box">
+    <h2>Client Login</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Secure Login</button>
+  </div>
 </section>
 
 <footer>
-    © 2026 Green Dot Bank | All Rights Reserved
+  © 2026 Green Dot Bank. All Rights Reserved.
 </footer>
 
 </body>
