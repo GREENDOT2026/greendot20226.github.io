@@ -1,3 +1,60 @@
+<script src="app.js"></script>
+<script>
+if (localStorage.getItem("auth") !== "true") {
+  window.location.href = "login.html";
+}
+</script>
+
+<h3>You're welcome, Michelle Ann</h3>
+
+<div class="balance-card">
+  <p>Available Balance</p>
+  <h1 id="balance"></h1>
+  <small>Reloadable Deposit Account</small>
+</div>
+
+<div class="card-visa">
+  Michelle Ann
+  <span>VISA • Active</span>
+</div>
+
+<div class="actions">
+  <a href="send.html">Send</a>
+  <a href="#">Add Money</a>
+  <a href="history.html">History</a>
+</div>
+
+<div class="transactions">
+  <strong>Recent Transactions</strong>
+  <div id="txList"></div>
+</div>
+
+<nav>
+  <a href="dashboard.html">Home</a>
+  <a href="send.html">Send</a>
+  <a href="history.html">History</a>
+  <a href="settings.html">Settings</a>
+</nav>
+
+<script>
+document.getElementById("balance").innerText =
+  "$" + getBalance().toLocaleString();
+
+const tx = JSON.parse(localStorage.getItem("transactions"));
+const list = document.getElementById("txList");
+
+if (tx.length === 0) {
+  list.innerHTML = "<p>No recent transactions</p>";
+} else {
+  tx.slice(0,3).forEach(t => {
+    list.innerHTML += `
+      <div class="tx">
+        <span>${t.title}</span>
+        <span>${t.amount < 0 ? "-" : "+"}$${Math.abs(t.amount)}</span>
+      </div>`;
+  });
+}
+</script>
 <!DOCTYPE html>
 <html>
 <head>
