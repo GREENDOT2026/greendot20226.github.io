@@ -1,3 +1,132 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f2f7f5;
+  color: #222;
+}
+
+/* Center card (login / verify) */
+.card {
+  max-width: 360px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+.card h2 {
+  margin: 10px 0;
+}
+
+.card p {
+  color: #4caf50;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid #cfded8;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #0aa36c;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Dashboard */
+h3 {
+  padding: 16px;
+  margin: 0;
+}
+
+.balance-card {
+  background: #fff;
+  margin: 12px 16px;
+  padding: 18px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.balance-card h1 {
+  color: #0aa36c;
+  margin: 8px 0;
+}
+
+.card-visa {
+  margin: 16px;
+  padding: 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#ffcc33,#ff9900);
+  color: #fff;
+}
+
+.card-visa span {
+  float: right;
+  font-size: 13px;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.actions a {
+  text-decoration: none;
+  color: #0aa36c;
+  font-weight: 600;
+}
+
+/* Transactions */
+.transactions {
+  background: #fff;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.tx {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Bottom nav */
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+}
+
+nav a {
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+}
 body {
   margin:0;
   font-family:Arial;
