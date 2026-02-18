@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transaction Receipt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card receipt">
+  <h2>Transaction Receipt</h2>
+
+  <div id="receiptData"></div>
+
+  <button onclick="window.print()">Download Receipt</button>
+  <br><br>
+  <a href="dashboard.html">Back to Home</a>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const tx = JSON.parse(localStorage.getItem("transactions"));
+const t = tx.find(x => x.id === id);
+
+if (!t) {
+  document.getElementById("receiptData").innerHTML =
+    "<p>Transaction not found</p>";
+} else {
+  document.getElementById("receiptData").innerHTML = `
+    <p><strong>Status:</strong> ${t.status}</p>
+    <p><strong>Amount:</strong> 
+      <span style="color:${t.amount < 0 ? 'red':'green'}">
+        ${t.amount < 0 ? '-' : '+'}$${Math.abs(t.amount)}
+      </span>
+    </p>
+    <p><strong>Category:</strong> ${t.category}</p>
+    <p><strong>Date:</strong> ${t.date}</p>
+    <p><strong>Reference ID:</strong> ${t.id}</p>
+  `;
+}
+</script>
+
+</body>
+</html>
