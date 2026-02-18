@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Enter PIN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>Enter Your PIN</h2>
+  <p>Face ID unavailable</p>
+
+  <input id="pin" type="password" maxlength="4" placeholder="••••">
+  <button onclick="checkPin()">Continue</button>
+</div>
+
+<script>
+const USER_PIN = "1234"; // fake demo pin
+
+function checkPin() {
+  const pin = document.getElementById("pin").value;
+  if (pin === USER_PIN) {
+    localStorage.setItem("verified", "true");
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Incorrect PIN");
+  }
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <title>Enter PIN</title>
