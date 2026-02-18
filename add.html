@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Money</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="add.html">Add Money</a>
+<div class="card">
+  <h2>Add Money</h2>
+  <input id="amount" type="number" placeholder="Amount">
+  <button onclick="addMoney()">Deposit</button>
+</div>
+
+<script src="app.js"></script>
+<script>
+function addMoney() {
+  const amt = parseFloat(document.getElementById("amount").value);
+  if (!amt || amt <= 0) return alert("Enter a valid amount");
+
+  let balance = getBalance();
+  balance += amt;
+  setBalance(balance);
+
+  addTransaction("Deposit", amt, "Deposit");
+
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
