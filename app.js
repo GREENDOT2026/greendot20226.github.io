@@ -1,3 +1,29 @@
+const users = {
+  michelle: {
+    name: "Michelle Ann",
+    balance: 175000,
+    transactions: []
+  },
+  david: {
+    name: "David Brooks",
+    balance: 82000,
+    transactions: []
+  }
+};
+
+if (!localStorage.getItem("currentUser")) {
+  localStorage.setItem("currentUser", "michelle");
+}
+
+function getUser() {
+  const key = localStorage.getItem("currentUser");
+  return users[key];
+}
+
+function saveUser(user) {
+  const key = localStorage.getItem("currentUser");
+  users[key] = user;
+}
 // Default data
 if (!localStorage.getItem("balance")) {
   localStorage.setItem("balance", "175000");
