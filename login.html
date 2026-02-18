@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Secure Access</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>Welcome, Michelle Ann</h2>
+  <p>Secure Access Portal</p>
+
+  <input type="password" id="password" placeholder="Enter your password">
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+  localStorage.setItem("auth", "true");
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
 <title>Login - Green Dot Bank</title>
 <style>
 body{
